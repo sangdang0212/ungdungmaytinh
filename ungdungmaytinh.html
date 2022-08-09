@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<input type="number" id="num1" placeholder="Nhập số thứ nhất" >
+<input type="number" id="num2" placeholder="Nhập số thứ hai" >
+<button onclick="Add()">Cộng</button>
+<button onclick="Sub()">Trừ</button>
+<button onclick="Mul()">Nhân</button>
+<button onclick="Div()">Chia</button>
+<h3>Result:</h3>
+<div id="result"></div>
+</body>
+</html>
+<script>
+    let a=  document.getElementById("num1");
+    let b= document.getElementById("num2");
+    function Add(){
+        let a1=Number(a.value)
+        let a2=Number(b.value)
+        c = a1+a2
+        document.getElementById("result").innerHTML = c;
+    }
+    function Sub(){
+        let a1=Number(a.value)
+        let a2=Number(b.value)
+        c = a1-a2
+        document.getElementById("result").innerHTML = c;
+    }
+    function Mul(){
+        let a1=Number(a.value)
+        let a2=Number(b.value)
+        c = a1*a2
+        document.getElementById("result").innerHTML = c;
+    }
+    function Div(){
+        let a1=Number(a.value)
+        let a2= Number(b.value)
+        if (a2==0){
+c="số thứ 2 không thể bằng 0"
+            document.getElementById("result").innerHTML = c
+        }else {  c = a1/a2
+            document.getElementById("result").innerHTML = c;}
+    }
+</script>
